@@ -1,5 +1,5 @@
 # Requires at least CMake 2.8 to configure the package.
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
 
 SET(CXX_DISABLE_WERROR TRUE)
 INCLUDE(cmake/base.cmake)
@@ -27,8 +27,8 @@ SET(${PROJECT_NAME}_HEADERS
   include/roboptim/capsule/util.hh
   include/roboptim/capsule/volume.hh
   )
-
-SETUP_PROJECT()
+compute_project_args(PROJECT_ARGS LANGUAGES CXX)
+project(${PROJECT_NAME} ${PROJECT_ARGS})
 
 # Declare dependencies
 SET(BOOST_COMPONENTS
