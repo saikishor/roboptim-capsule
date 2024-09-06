@@ -1,5 +1,5 @@
 # Requires at least CMake 2.8 to configure the package.
-CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.10)
 
 SET(CXX_DISABLE_WERROR TRUE)
 INCLUDE(cmake/base.cmake)
