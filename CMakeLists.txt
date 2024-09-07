@@ -7,6 +7,7 @@ SET(PROJECT_NAME roboptim-capsule)
 SET(PROJECT_DESCRIPTION
   "An automated optimal capsule generator over polyhedrons.")
 SET(PROJECT_URL "https://github.com/roboptim/roboptim-capsule")
+set(PROJECT_USE_CMAKE_EXPORT TRUE)
 
 # Use MathJax for Doxygen formulae
 SET(DOXYGEN_USE_MATHJAX "YES")
