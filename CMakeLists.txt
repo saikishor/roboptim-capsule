@@ -1,7 +1,7 @@
 # Requires at least CMake 2.8 to configure the package.
 CMAKE_MINIMUM_REQUIRED(VERSION 3.10)
 
-SET(CMAKE_CXX_STANDARD 98)
+SET(CMAKE_CXX_STANDARD 14)
 
 SET(PROJECT_NAME roboptim-capsule)
 SET(PROJECT_DESCRIPTION
@@ -43,6 +43,9 @@ SEARCH_FOR_QHULL()
 ADD_project_DEPENDENCY(Eigen3)
 ADD_project_DEPENDENCY(roboptim-core )
 ADD_project_DEPENDENCY(roboptim-core-plugin-ipopt)
+
+set(BOOST_REQUIRED_COMPONENTS filesystem)
+add_project_dependency(Boost REQUIRED COMPONENTS ${BOOST_REQUIRED_COMPONENTS})
 
 # Add main library to pkg-config file.
 PKG_CONFIG_APPEND_LIBS(${PROJECT_NAME})

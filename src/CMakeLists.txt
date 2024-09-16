@@ -12,7 +12,7 @@ ADD_LIBRARY(${LIBRARY_NAME} SHARED
 
 SET_TARGET_PROPERTIES(${LIBRARY_NAME} PROPERTIES VERSION 3 SOVERSION 3.2.0)
 
-TARGET_LINK_LIBRARIES(${LIBRARY_NAME} ${QHULL_LIBRARIES} roboptim-core::roboptim-core Eigen3::Eigen roboptim-core-plugin-ipopt::roboptim-core-plugin-ipopt)
+TARGET_LINK_LIBRARIES(${LIBRARY_NAME} ${QHULL_LIBRARIES} roboptim-core::roboptim-core Eigen3::Eigen roboptim-core-plugin-ipopt::roboptim-core-plugin-ipopt Boost::filesystem)  
 target_include_directories(
   ${LIBRARY_NAME} PUBLIC $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 #PKG_CONFIG_USE_DEPENDENCY(${LIBRARY_NAME} roboptim-core)
