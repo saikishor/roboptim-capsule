@@ -27,6 +27,7 @@ SET(CXX_DISABLE_WERROR TRUE)
 INCLUDE(cmake/base.cmake)
 INCLUDE(cmake/boost.cmake)
 INCLUDE(cmake/qhull.cmake)
+INCLUDE(cmake/eigen.cmake)
 
 compute_project_args(PROJECT_ARGS LANGUAGES CXX C)
 project(${PROJECT_NAME} ${PROJECT_ARGS})
@@ -41,6 +42,8 @@ SET(BOOST_COMPONENTS
 SEARCH_FOR_BOOST()
 SEARCH_FOR_QHULL()
 ADD_project_DEPENDENCY(Eigen3)
+ADD_PROJECT_DEPENDENCY(Eigen3)
+SEARCH_FOR_EIGEN("eigen3 >= 3.2.5")
 ADD_project_DEPENDENCY(roboptim-core )
 ADD_project_DEPENDENCY(roboptim-core-plugin-ipopt)
 
